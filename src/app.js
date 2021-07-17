@@ -4,7 +4,7 @@ const app=express()
 const hbs = require('hbs')
 const forecast = require('./utils/forcast')
 const geocode = require('./utils/geocode')
-
+const port = process.env.PORT || 3000
 
 
 
@@ -33,8 +33,8 @@ app.get('/help',(req,res)=>{
     res.render('help')
 })
 
-app.listen(3000,()=>{
-    console.log('server is up and running ')
+app.listen(port,()=>{
+    console.log('server is up and running at poty : '+port)
 })
 app.get('',(req,res)=>{
     res.send('hello Friend')
